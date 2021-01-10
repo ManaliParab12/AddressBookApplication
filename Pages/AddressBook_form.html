@@ -22,15 +22,16 @@
     </div>
 </header> 
     <!-- UC2 -->
-<form class ="form" action="#" onreset="" onsubmit="">
 <div class="form-content">
+    <form class ="form" action="#" onreset="resetForm()" onsubmit="save()">
     <div class="form-head">Person Address Form
-        <button class="btn" style="font-size:12px"><i class="fa fa-close"></i></button>
+        <a href="./home.html" button id="cancelButton" class="cancelButton" ><i class="fa fa-close"></i></button></a>
     </div>
      <!-- UC3 -->
     <div class="row-content">
         <label class="label text" for="name">Full Name</label>
         <input class="input" type="text" id="name" name="name" placeholder="your name.." required>
+        <error-output class="text-error" for="text"></error-output>
     </div> 
     <div class="row-content">
         <label class="label text" for="address">Address</label>
@@ -65,7 +66,14 @@
     <div class="row-content">
         <label class="label text" for="number">Phone Number</label>
         <input class="input" type="tel" id="number" name="number" placeholder="" >
+        <error-output class="number-error" for="text"></error-output>
     </div> 
+    <div class="button-content submit-reset">
+            <button type="submit" class="button submitButton" id="submitButton">Add</button>
+            <button type="reset" class="resetButton button">Reset</button>
+        </div>
+    </div>
+   
 </form>
 </div>
 </body>
